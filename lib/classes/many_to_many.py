@@ -164,7 +164,7 @@ class Magazine:
         pass
 
 # creating Authors 
-author1 = Author("David Parsley")
+author1 = Author("Abdimalik Omar")
 author2 = Author("Joy Mwende")
 
 # creating Magazines 
@@ -172,11 +172,11 @@ magazine1 = Magazine("National Geo", "Nature")
 magazine2 = Magazine("Rolling Stone", "Music")
 
 # adding articles to authors and link them to magazines
-article1 = author1.add_article(magazine1, "The African Savannah")
+article1 = author1.add_article(magazine1, "The Big Five")
 article2 = author2.add_article(magazine2, "Hottest Realeases of the Week")
 
 
-# check articles of David & Joy
+# check articles of Abdimalik  & Joy
 print(f"Articles by {author1.name}:")
 for article in author1.articles():
     print(f"{article.title}\nMagazine: {article.magazine.name}\n")
