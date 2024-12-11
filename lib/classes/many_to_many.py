@@ -161,7 +161,19 @@ class Magazine:
         return titles    
 
     def contributing_authors(self):
-        pass
+        """Return authors who have written more than 2 articles for this magazine."""
+        author_article_count = {}
+        
+        # Count the number of articles each author has written for this magazine
+        for article in self.articles():
+            author = article.author
+            if author in author_article_count:
+                author_article_count[author] += 1
+            else:
+                author_article_count[author] = 1
+        
+        # Return authors with more than 2 articles
+        return [author for author, count in author_article_count.items() if count > 2]
 
 # creating Authors 
 author1 = Author("Abdimalik Omar")
